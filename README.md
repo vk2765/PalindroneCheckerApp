@@ -1,10 +1,11 @@
-# PalindroneCheckerApp
-The UseCase2PalindromeCheckerApp class demonstrates basic palindrome validation using a predefined (hardcoded) string value.
+The UseCase3PalindromeCheckerApp class checks whether a given string is a palindrome by reversing the string and comparing it with the original value.
 
-When the program starts, the Java Virtual Machine (JVM) invokes the main() method. A string literal (for example, "madam") is stored in a String variable. The program then checks whether the string is a palindrome by comparing characters from the beginning and the end, moving toward the center of the string.
+When the program starts, the Java Virtual Machine (JVM) invokes the main() method. A string literal (for example, "madam") is stored in a String variable. The program then reverses the string using a for loop that iterates from the last character to the first.
 
-A for loop is used to iterate only up to half of the string length. If any pair of characters does not match, the string is determined to be not a palindrome. Otherwise, if all characters match, the string is confirmed as a palindrome.
+During each iteration, characters are appended to a new String variable to build the reversed version. Since Strings in Java are immutable, each concatenation creates a new String object.
 
-Finally, the result is displayed on the console using System.out.println().
+After the reversed string is constructed, the program uses the equals() method to compare the original string with the reversed string. If both are equal, the string is declared a palindrome; otherwise, it is not.
 
-This use case introduces fundamental string handling and comparison logic, forming the foundation for more advanced palindrome validation techniques in later stages.
+Finally, the result is displayed on the console.
+
+This use case introduces transformation-based validation and demonstrates concepts such as string immutability, string concatenation, loops, and content comparison using the equals() method.
