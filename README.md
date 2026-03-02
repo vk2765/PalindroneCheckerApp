@@ -1,3 +1,9 @@
+ uc4
+# PalindroneCheckerApp
+The Palindrome Checker App is a console-based Java application designed to validate whether a given string is a palindrome. The project focuses on strengthening core Java programming fundamentals and understanding essential data structure concepts through practical implementation.
+
+This implementation specifically demonstrates UC4: Character Array Based Palindrome Check.
+=======
 The UseCase3PalindromeCheckerApp class checks whether a given string is a palindrome by reversing the string and comparing it with the original value.
 
 When the program starts, the Java Virtual Machine (JVM) invokes the main() method. A string literal (for example, "madam") is stored in a String variable. The program then reverses the string using a for loop that iterates from the last character to the first.
@@ -9,3 +15,4 @@ After the reversed string is constructed, the program uses the equals() method t
 Finally, the result is displayed on the console.
 
 This use case introduces transformation-based validation and demonstrates concepts such as string immutability, string concatenation, loops, and content comparison using the equals() method.
+ main
