@@ -1,33 +1,44 @@
-public class UseCase2PalindromeCheckerApp {
+
+public class UseCase4PalindromeCheckerApp {
 
     /**
-     * Application entry point for UC2.
-     *
+     * Application entry point for UC4.
      * @param args Command-line arguments
      */
     public static void main(String[] args) {
 
-        // Hardcoded string literal
-        String input = "madam";
+        // Declare and initialize the input string
+        String input = "radar";
 
+        // Convert the string into a character array
+        char[] chars = input.toCharArray();
+
+        // Initialize pointer at the beginning
+        int start = 0;
+
+        // Initialize pointer at the end
+        int end = chars.length - 1;
+
+        // Assume palindrome initially
         boolean isPalindrome = true;
 
-        // Loop only till half of the string length
-        for (int i = 0; i < input.length() / 2; i++) {
+        // Continue comparison until pointers cross
+        while (start < end) {
 
-            if (input.charAt(i) != input.charAt(input.length() - 1 - i)) {
+            if (chars[start] != chars[end]) {
                 isPalindrome = false;
                 break;
             }
+
+            start++;
+            end--;
         }
 
         // Display result
-        System.out.println("Input String : " + input);
-
         if (isPalindrome) {
-            System.out.println("Result : The string is a Palindrome.");
+            System.out.println(input + " is a Palindrome.");
         } else {
-            System.out.println("Result : The string is NOT a Palindrome.");
+            System.out.println(input + " is NOT a Palindrome.");
         }
     }
 }
