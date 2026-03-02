@@ -1,23 +1,33 @@
-public class UseCase1PalindromeCheckerApp {
+public class UseCase2PalindromeCheckerApp {
 
     /**
-     * Application entry point.
-     *
-     * This is the first method executed by the JVM
-     * when the program starts.
+     * Application entry point for UC2.
      *
      * @param args Command-line arguments
      */
     public static void main(String[] args) {
 
-        // Welcome Message
-        System.out.println("   Welcome to Palindrome Checker App");
+        // Hardcoded string literal
+        String input = "madam";
 
-        // Application Details
-        System.out.println("Application Name : Palindrome Checker");
-        System.out.println("Version          : 1.0");
+        boolean isPalindrome = true;
 
-        System.out.println("Application started successfully.");
-        System.out.println("Ready for next use case.");
+        // Loop only till half of the string length
+        for (int i = 0; i < input.length() / 2; i++) {
+
+            if (input.charAt(i) != input.charAt(input.length() - 1 - i)) {
+                isPalindrome = false;
+                break;
+            }
+        }
+
+        // Display result
+        System.out.println("Input String : " + input);
+
+        if (isPalindrome) {
+            System.out.println("Result : The string is a Palindrome.");
+        } else {
+            System.out.println("Result : The string is NOT a Palindrome.");
+        }
     }
 }
