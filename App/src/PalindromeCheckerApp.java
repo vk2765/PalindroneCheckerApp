@@ -1,4 +1,8 @@
  uc6
+import java.util.*;
+
+
+ uc6
 import java.util.Stack;
 
 public class PalindromeCheckerApp {
@@ -16,10 +20,26 @@ public class PalindromeCheckerApp {
             stack.push(c);
         }
 
- uc4
+ uc4 main
 public class PalindromeCheckerApp {
 
     public static void main(String[] args) {
+
+ uc6
+        // Define input
+        String input = "civic";
+
+        // Create Queue (FIFO)
+        Queue<Character> queue = new LinkedList<>();
+
+        // Create Stack (LIFO)
+        Stack<Character> stack = new Stack<>();
+
+        // Insert characters into both structures
+        for (char c : input.toCharArray()) {
+            queue.add(c);     // enqueue
+            stack.push(c);    // push
+        }
 
         // Declare and initialize input
         String input = "radar";
@@ -31,12 +51,22 @@ public class PalindromeCheckerApp {
         int start = 0;
         int end = chars.length - 1;
  main
+ main
 
         // Assume palindrome
         boolean isPalindrome = true;
  uc5
         // Pop and compare with original string
         for (char c : input.toCharArray()) {
+
+ uc6
+        // Compare dequeue vs pop
+        while (!queue.isEmpty()) {
+
+            if (queue.remove() != stack.pop()) {
+                isPalindrome = false;
+                break;
+            }
 
         // Compare until pointers cross
         while (start < end) {
@@ -73,8 +103,14 @@ public class PalindromeCheckerApp {
         // Iterate from last character to first
         for (int i = input.length() - 1; i >= 0; i--) {
             reversed = reversed + input.charAt(i);
+ main
         }
  uc4
+        // Print result
+        System.out.println("Input : " + input);
+        System.out.println("Is Palindrome? : " + isPalindrome);
+
+ uc6
         // Print result
         System.out.println("Input : " + input);
         System.out.println("Is Palindrome? : " + isPalindrome);
@@ -111,6 +147,7 @@ public class PalindromeCheckerApp {
         System.out.println("Input text: " + input);
         System.out.println("Is it a Palindrome?: " + isPalindrome
                            main
+ main
  main
  main
     }
