@@ -1,3 +1,21 @@
+ uc6
+import java.util.Stack;
+
+public class PalindromeCheckerApp {
+
+    public static void main(String[] args) {
+
+        // Declare and initialize input string
+        String input = "noon";
+
+        // Create stack
+        Stack<Character> stack = new Stack<>();
+
+        // Push each character into stack
+        for (char c : input.toCharArray()) {
+            stack.push(c);
+        }
+
  uc4
 public class PalindromeCheckerApp {
 
@@ -12,17 +30,29 @@ public class PalindromeCheckerApp {
         // Initialize pointers
         int start = 0;
         int end = chars.length - 1;
+ main
 
         // Assume palindrome
         boolean isPalindrome = true;
+ uc5
+        // Pop and compare with original string
+        for (char c : input.toCharArray()) {
 
         // Compare until pointers cross
         while (start < end) {
+ main
 
-            if (chars[start] != chars[end]) {
+            if (c != stack.pop()) {
                 isPalindrome = false;
                 break;
             }
+ uc5
+        }
+
+        // Print result
+        System.out.println("Input : " + input);
+        System.out.println("Is Palindrome? : " + isPalindrome);
+
 
 uc3
 import java.util.Scanner;
@@ -81,6 +111,7 @@ public class PalindromeCheckerApp {
         System.out.println("Input text: " + input);
         System.out.println("Is it a Palindrome?: " + isPalindrome
                            main
+ main
  main
     }
 }
