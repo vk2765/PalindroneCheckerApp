@@ -1,71 +1,29 @@
- uc4
+import java.util.Scanner;
 
-public class UseCase4PalindromeCheckerApp {
-
-    /**
-     * Application entry point for UC4.
-     * @param args Command-line arguments
-     */
-    public static void main(String[] args) {
-
-        // Declare and initialize the input string
-        String input = "radar";
-
-        // Convert the string into a character array
-        char[] chars = input.toCharArray();
-
-        // Initialize pointer at the beginning
-        int start = 0;
-
-        // Initialize pointer at the end
-        int end = chars.length - 1;
-
-        // Assume palindrome initially
-        boolean isPalindrome = true;
-
-        // Continue comparison until pointers cross
-        while (start < end) {
-
-            if (chars[start] != chars[end]) {
-                isPalindrome = false;
-                break;
-            }
-
-            start++;
-            end--;
-        }
-
-        // Display result
-        if (isPalindrome) {
-            System.out.println(input + " is a Palindrome.");
-
-
-public class UseCase3PalindromeCheckerApp {
-
+public class PalindromeCheckerApp {
 
     public static void main(String[] args) {
 
-        // Hardcoded input string
-        String input = "madam";
+        Scanner sc = new Scanner(System.in);
 
-        // Variable to store reversed string
+        // Take input
+        System.out.print("Enter a string: ");
+        String input = sc.nextLine();
+
         String reversed = "";
 
-        // Iterate from the last character to the first
+        // Iterate from last character to first
         for (int i = input.length() - 1; i >= 0; i--) {
             reversed = reversed + input.charAt(i);
         }
 
-        // Display original and reversed strings
-        System.out.println("Original String : " + input);
-        System.out.println("Reversed String : " + reversed);
-
-        // Compare using equals() method
+        // Compare original and reversed
         if (input.equals(reversed)) {
-            System.out.println("Result : The string is a Palindrome.");
- main
+            System.out.println("Is it a Palindrome?: true");
         } else {
-            System.out.println(input + " is NOT a Palindrome.");
+            System.out.println("Is it a Palindrome?: false");
         }
+
+        sc.close();
     }
 }
